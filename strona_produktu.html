@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Projekt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js">
+    </script>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Technologie webowe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ekstrakcja_opinii.html">Ekstrakcja opinii </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="lista_produktow.html">Lista produktów</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="o_autorze.html">O autorze</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h3>Opinie</h3>
+        <table id="example" class="table table-striped" style="width:100%">
+            <button type="button" class="btn btn-primary btn-sm">.csv</button>
+            <button type="button" class="btn btn-primary btn-sm">.xlsx</button>
+            <button type="button" class="btn btn-primary btn-sm">.json</button>
+            <button type="button" class="btn btn-primary btn-sm"><a href="wykres.html" class="text-decoration-none text-white">Wykres</a></button>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa produktu</th>
+                    <th>Liczba opinii</th>
+                    <th>Liczba wad</th>
+                    <th>Liczba zalet</th>
+                    <th>Średnia ocena</th>
+                    <th>Wady</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jonas Alexander</td>
+                    <td>Developer</td>
+                    <td>San Francisco</td>
+                    <td>30</td>
+                    <td>2010-07-14</td>
+                    <td>$86,500</td>
+                    <td>$112,000</td>
+                </tr>
+                <tr>
+                    <td>Shad Decker</td>
+                    <td>Regional Director</td>
+                    <td>Edinburgh</td>
+                    <td>51</td>
+                    <td>2008-11-13</td>
+                    <td>$183,000</td>
+                    <td>$112,000</td>
+                </tr>
+                <tr>
+                    <td>Michael Bruce</td>
+                    <td>Javascript Developer</td>
+                    <td>Singapore</td>
+                    <td>29</td>
+                    <td>2011-06-27</td>
+                    <td>$183,000</td>
+                    <td>$112,000</td>
+                </tr>
+                <tr>
+                    <td>Donna Snider</td>
+                    <td>Customer Support</td>
+                    <td>New York</td>
+                    <td>27</td>
+                    <td>2011-01-25</td>
+                    <td>$112,000</td>
+                    <td>$112,000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa produktu</th>
+                    <th>Liczba opinii</th>
+                    <th>Liczba wad</th>
+                    <th>Liczba zalet</th>
+                    <th>Średnia ocena</th>
+                    <th>Wady</th>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+    <div class="container fixed-bottom ">
+        <footer>
+            <p class="text-center text-muted ">© 2023 Michał Szewczyk</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    });
+</script>
